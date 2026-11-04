@@ -33,6 +33,15 @@ El sistema se organiza en torno al estado compartido del tablero y la gestión c
 
 ## 4. Modo de Compilación y Uso
 
-Para compilar el proyecto con las banderas estrictas requeridas (`gcc` o `g++`):
+### Compilación
+El proyecto se compila mediante `Makefile` utilizando las banderas estrictas exigidas (`-Wall -Wextra -std=c17` o `-std=c++17`) junto con las librerías POSIX:
+
 ```bash
-make  
+make
+# Ejecución con archivo de configuración (ejemplo: 10 jugadores, 3 mesas)
+./torneo 10 3 config.txt
+
+# Ejecución básica sin archivo de configuración (ejemplo: 8 jugadores, 2 mesas)
+./torneo 8 2
+
+make clean
